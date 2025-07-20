@@ -19,11 +19,12 @@ public class User {
     private String lastName;
     private String email;
     private String password;
+    private String gender;
     @ElementCollection
     private List<Integer> followers =new ArrayList<>();
     @ElementCollection
     private List<Integer> following =new ArrayList<>();
-    private String gender;
+
     @ManyToMany
     private List<Post> savedPosts=new ArrayList<>();
 
