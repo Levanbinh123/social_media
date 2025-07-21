@@ -31,7 +31,7 @@ public class UserContorller {
         User u = userService.updateUser(user,requestUser.getId());
         return ResponseEntity.ok().body(u);
     }
-    @PutMapping("/follow/{userId2}")
+    @PutMapping("/follow/{userId}")
     public ResponseEntity<User> flollowUserHandler( @RequestHeader("Authorization") String token,@PathVariable Integer userId) throws Exception{
         User requestUser=userService.findUserByToken(token);
         User user=userService.followUser( requestUser.getId(),userId);
